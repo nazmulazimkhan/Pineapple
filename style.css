@@ -20,42 +20,27 @@ canvas {
 }
 
 
+
 .slidecontainer {
-
-  	position: absolute;
-    margin: auto;
-    height: 80%;
-    width: 20px;
-    top: 50%;
-    /*left:-50%;*/
-    /*left: 50%;*/
-    z-index: 2;
-
-overflow: hidden;
-
+  width: 15px; /* Width of the outside container */
+  height: 80%;
+  top: 10%;
+  left: 2%;
+  position: absolute;
+  overflow: hidden;
 }
 
 /* The slider itself */
 .slider {
-	overflow: hidden;
-		position: fixed;
-  -webkit-appearance: none;  
-  /*-webkit-transform:rotate(-90deg);*/
+  -webkit-appearance: slider-vertical;  /* Override default CSS styles */
   appearance: none;
-  width: 10px; /* Full-width */
-  /*height: 80%;*/
+  width: 100%; /* Full-width */
+  height: 100%; /* Specified height */
   background: #d3d3d3; /* Grey background */
   outline: none; /* Remove outline */
-  opacity: 0.4; /* Set transparency (for mouse-over effects on hover) */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
   transition: opacity .2s;
-  vertical-align: middle;
-  transform: 
-  		rotate(-90deg);
-  		/*translate(50%, 100%)*/
-  border-radius: 15px;
-}
-  		
 }
 
 /* Mouse-over effects */
@@ -68,9 +53,15 @@ overflow: hidden;
   -webkit-appearance: none; /* Override default look */
   appearance: none;
   width: 25px; /* Set a specific slider handle width */
-  height: 15px; /* Slider handle height */
-  background: #00aeff; /* Green background */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
   cursor: pointer; /* Cursor on hover */
-  border-radius: 15px;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
 }
 
